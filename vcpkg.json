@@ -1,0 +1,10 @@
+{
+    "name": "vulkanshaderdemo",
+    "version-string": "1",
+    "dependencies": [ 
+        "glfw3",
+        "vulkan-memory-allocator",
+        "stb"
+    ]
+
+}

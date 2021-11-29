@@ -1,0 +1,47 @@
+Package: vcpkg-cmake-config
+Version: 2021-11-01
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 23b1688a9181942498e8d7fbc281c0bfcfeb3c4ad1a5821d2f9e99a5082ee010
+Type: Port
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2021-09-13
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1a4e4343e4678e1775f60c53966b80569dfa7d582b9b9932b06055abcd544242
+Type: Port
+Status: install ok installed
+
+Package: glfw3
+Version: 3.3.5
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a676443f231ae4c002d7fc877009260569a7078a2df307517afc4c2c968ad0b1
+Description: GLFW is a free, Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development. It provides a simple, platform-independent API for creating windows, contexts and surfaces, reading input, handling events, etc.
+Type: Port
+Status: install ok installed
+
+Package: vulkan
+Version: 1.1.82.1
+Port-Version: 2
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e03ebdb4f6da36f8e189ef7cc14bb828a2535ad45041c1f24b94e9828c9032c3
+Description: A graphics and compute API that provides high-efficiency, cross-platform access to modern GPUs on a wide variety of devices.
+Type: Port
+Status: purge ok not-installed
+
+Package: vulkan-hpp
+Version: 1.2.184
+Port-Version: 1
+Depends: vulkan
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ea3cb5ad17a487e0cd2a7c1e9d31a42683a8f5a7f22ce289eec42d0cb70f7170
+Description: Header only C++ bindings for the Vulkan C API
+Type: Port
+Status: purge ok not-installed
+

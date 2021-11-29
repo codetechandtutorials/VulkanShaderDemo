@@ -1,0 +1,9 @@
+x64-windows/
+x64-windows/include/
+x64-windows/include/vk_mem_alloc.h
+x64-windows/share/
+x64-windows/share/unofficial-vulkan-memory-allocator/
+x64-windows/share/unofficial-vulkan-memory-allocator/unofficial-vulkan-memory-allocator-config.cmake
+x64-windows/share/vulkan-memory-allocator/
+x64-windows/share/vulkan-memory-allocator/copyright
+x64-windows/share/vulkan-memory-allocator/vcpkg_abi_info.txt

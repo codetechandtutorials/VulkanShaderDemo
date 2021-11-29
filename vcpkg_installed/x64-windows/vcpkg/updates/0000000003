@@ -1,0 +1,9 @@
+Package: vulkan-memory-allocator
+Version: 2021-07-07
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b4b8abd96dcd571cb861adb45479ededc5e2f3d5df447d5faa8ad7a0611915e5
+Description: Easy to integrate Vulkan memory allocation library from GPUOpen
+Type: Port
+Status: install ok installed
