@@ -1,8 +1,10 @@
 #pragma once
 #include "VkBootstrap.h"
 #include "common.h"
+#include <exception>
 #include <GLFW/glfw3.h>
 #include <fstream>
+#include <iostream>
 static GLFWwindow* os_window;
 static VulkanLibrary vk_lib;
 static vkb::Instance instance;
@@ -554,14 +556,15 @@ void cleanup() {
 
 int init() {
   if (0 != device_initialization()) return -1;
-  if (0 != create_swapchain()) return -1;
-  if (0 != get_queues()) return -1;
-  if (0 != create_render_pass()) return -1;
-  if (0 != create_graphics_pipeline()) return -1;
-  if (0 != create_framebuffers()) return -1;
-  if (0 != create_command_pool()) return -1;
-  if (0 != create_command_buffers()) return -1;
-  if (0 != create_sync_objects()) return -1;
+  if (0 != create_swapchain()) return -2;
+  if (0 != get_queues()) return -3;
+  if (0 != create_render_pass()) return -4;
+  if (0 != create_graphics_pipeline()) return -5;
+  if (0 != create_framebuffers()) return -6;
+  if (0 != create_command_pool()) return -7;
+  if (0 != create_command_buffers()) return -8;
+  if (0 != create_sync_objects()) return -9;
+  return 0;
 }
 
 bool running() {
@@ -571,11 +574,8 @@ void update() {
 
 }
 void render() {
-  try {
-  if (draw_frame() != 0)
-    throw("failed to draw frame\n");
-  } catch (const std::exception& e) {
-        
+  if (draw_frame() != 0) {
+    throw std::runtime_error("Draw Frame Error During Render!");
   }
   glfwSwapBuffers(os_window);
 }
